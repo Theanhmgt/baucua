@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: none; */
+    font-family: "Poppins",sans-serif;
+    font-size: 14px;
+}
+body {
+    background-color: #f9f9f9;
+}
+
+.grid.wide {
+    border-radius: 15px;
+    box-shadow: -1px 1px 20px 0 rgba(0,0,0,0.5);
+    background-color: #fff;
+}
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #ebebeb;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.lights {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+    left: 4%;
+}
+.lights::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: green;
+    left: -160%;
+}
+.lights::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: red;
+    right: -160%;
+}
+.header {
+    padding: 30px 0;
+    position: relative;
+}
+/* Tao thong bao */
+#toast {
+    position: absolute;
+    top: 150%;
+    z-index: 1;
+    right: 40px;
+}
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #dedbe2;
+    border-radius: 8px;
+    min-width: 400px;
+    max-width: 450px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    /* transition: all linear 0.3s; */
+}
+.icon-conditon-toast {
+    font-size: 40px;
+    padding: 15px;
+}
+.inner-container {
+    flex-grow: 1;
+}
+.inner-container p:first-child {
+    padding: 5px 0 5px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.inner-container p:last-child {
+    font-size: 1rem;
+}
+.toast-control {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    border-left: 2px solid #ccc;
+}
+.toast-control::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+}
+.toast-control div:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+.win .icon-conditon-toast {
+    color: #53BF9D;
+}
+.lose .icon-conditon-toast {
+    color: #F94C66;
+}
+.tie .icon-conditon-toast {
+    color: #FFC54D;
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 40px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+}
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }   
+}
+/* Thong tin nguoi dung */
+.info {
+    position: absolute;
+    right: 32px;
+}
+.info .avata {
+    border-radius: 50%;
+    border: 1px solid #000;
+    padding: 8px;
+    font-size: 22px;
+    margin-right: 8px;
+}
+.info .plus {
+}
+.info .coin-user {
+    font-size: 20px;
+    font-weight: 400;
+}
+.info .coin-icon {
+    font-size: 20px;
+    color: #E6B325;
+}
+hr {
+    margin-bottom: 20px;
+}
+/* Containt */
+.item {
+    margin-bottom: 15px;
+    transition: all 0.2s linear;
+}
+.item:hover {
+    transform: scale(1.05);
+}
+.item img {
+    width: 100%;
+    object-fit: cover;
+    /* border: 3px solid #6a8d71; */
+    border-bottom: unset;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    vertical-align:bottom
+}
+.item .control-coin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#F6E3C5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* border: 3px solid #6a8d71; */
+    border-top: unset;
+    height: 45px;
+    text-align: center;
+}
+.increase,
+.reduce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    background-color: #4CACBC;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.increase:hover,
+.reduce:hover {
+    opacity: 0.8;
+}
+.coin {
+    color: #000;
+    margin: 0 10px;
+    font-weight: bold;
+}
+/* Begin Control */
+.row .control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    /* border: 3px solid #6a8d71; */
+    width: 500px;
+    height: 500px;
+    background-color: #FBF8F1;
+    border-radius: 50%;
+    position: relative;
+}
+#dice1,
+#dice2,
+#dice3
+{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+}
+#dice1 {
+    top: calc(12% + 60px);
+    left: 15%;
+}
+
+#dice2 {
+    top: calc(12% + 60px);
+    right: 15%;
+}
+
+#dice3 {
+    bottom: 12%;
+    left: calc(50% - 60px);
+    text-align: center;
+}
+
+.circle #dice1 {
+    background: url('../img/bau.jpg') top center / cover no-repeat;
+}
+.circle #dice2 {
+    background: url('../img/cua.jpg') top center / cover no-repeat;
+}
+.circle #dice3 {
+    background: url('../img/ga.jpg') top center / cover no-repeat;
+}
+.spin {
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    background-color: #E9DAC1;
+    /* background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%); */
+    font-weight: bold;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    line-height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.spin:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}

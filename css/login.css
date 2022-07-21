@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    position: relative;
+}
+.account {
+    min-width: 450px;
+    min-height: 590px;
+    background-color: #fff;
+    box-shadow: -1px 1px 20px 0 rgba(0,0,0,0.5);
+    border-radius: 10px;
+    position: fixed;
+    top: 8%;
+    right: 5%;
+    z-index: 3;
+    /* animation: fadeInAccount .3s linear; */
+    transition: all .3s  linear;
+}
+.over-lay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: fadeIn linear 0.2s;
+}
+.sign-header {
+    height: 230px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: url(../img/acc.webp) center / cover no-repeat ;
+}
+
+.sign-in-container, 
+.sign-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: fadeInAccount .3s ease ;
+    transition: all .3s linear;
+}
+form {
+    width: 100%;
+    padding: 0 60px;
+}
+.account-heading {
+    font-size: 25px;
+    color: #243762;
+    line-height: 1.2rem;
+    display: inline-block;
+    font-weight: 200;
+}
+.account-tile {
+    font-size: 16px;
+    color: #243762;
+    line-height: 1.2rem;
+    margin: 10px 0;
+}
+.form-group {
+    position: relative;
+}
+.input {
+  width:100%;
+  height:50px;
+  padding:5px 7px 5px 15px;
+  border-radius: 15px;
+  background:#fff;
+  color:#666;
+  border:2px solid #ddd;
+  margin-bottom: 15px;
+}
+.form-icon {
+    position: absolute;
+    top: 15px;
+    right: 14px;
+    font-size: 20px;
+}
+.leave-state {
+    display: flex;
+    justify-content: center;
+}
+/* .leave-state p {
+    color: #243762;
+} */
+.leave-state span {
+    font-size: 16px;
+    line-height: 1.2rem;
+    color: rgb(27, 27, 136);
+    margin: 0 8px;
+    transition: all .1s linear;
+}
+.leave-state span:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.btn-submit button{
+    margin-bottom: 12px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #80b2fd;
+    transition: all .1s linear;
+
+}
+.btn-submit button:hover {
+    background-color: #4b94fe;
+    transform: scale(1.05);
+}
+.active {
+    display: none;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0); 
+
+    }
+    to {
+        backdrop-filter: blur(8px);
+        opacity: 1;
+    }
+}
+@keyframes fadeInAccount {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
