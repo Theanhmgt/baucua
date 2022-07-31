@@ -25,10 +25,8 @@ const SigningApp = {
                 //Đăng Nhập
                 if (form.matches('#sign-in')) { 
                     const user = this.findGmail(userList, userInput.gmail); 
-                    console.log(user)
                     if (user) { 
                         if (user.pass === userInput.pass){
-                            //////???????????
                             userData.currenUser = user;
                             window.location.href = "./main.html"
                         }
