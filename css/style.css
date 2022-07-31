@@ -9,11 +9,23 @@
 body {
     background-color: #f9f9f9;
 }
-
 .grid.wide {
     border-radius: 15px;
-    box-shadow: -1px 1px 20px 0 rgba(0,0,0,0.5);
+    box-shadow:  10px 10px 20px #b1b1b1,
+             -10px -10px 20px #b1b1b1;
     background-color: #fff;
+    animation: fadeInGrowth ease-in 0.3s;
+    transition: all .2s linear;
+}
+@keyframes fadeInGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 /* Header */
 .header {
@@ -51,29 +63,80 @@ body {
     background-color: red;
     right: -160%;
 }
-.header {
-    padding: 30px 0;
-    position: relative;
+.out-game {
+    position: absolute;
+    left: 10%;
+    display: flex;
+
+}
+.out-game a {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background-color: #ebebeb;
+    color: #000;
+    border-radius: 2px;
+    padding: 5px 8px;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+.out-game a i {
+    font-size: 18px;
+}
+.out-game a i:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+.name-game {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 35px;
+    font-size: 14px;
+    margin: 10px;
+    border: 1px solid #f9f9f9;
+    background-color: #ebebeb;
+    color: #a3a3a3;
+    border-radius: 20px;
 }
 /* Tao thong bao */
-#toast {
-    position: absolute;
-    top: 150%;
-    z-index: 1;
-    right: 40px;
-}
 .toast {
+    position: fixed;
+    z-index: 2;
+    top: 10%;
+    right: 5%;
     display: flex;
     align-items: center;
     background-color: #dedbe2;
     border-radius: 8px;
-    min-width: 400px;
+    box-shadow:  5px 5px 10px #f7f7f7,
+    -5px -5px 10px #ffffff;
+    min-width: 440px;
     max-width: 450px;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
-    /* transition: all linear 0.3s; */
+    animation: fadeInGrowth .3s ease, fadeOut .5s 3s linear forwards;
+    transition: all linear 0.3s;
+}
+@keyframes fadeInGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }   
 }
 .icon-conditon-toast {
-    font-size: 40px;
+    font-size: 36px;
     padding: 15px;
 }
 .inner-container {
@@ -85,7 +148,8 @@ body {
     font-weight: 400;
 }
 .inner-container p:last-child {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin: 3px 0;
 }
 .toast-control {
     width: 70px;
@@ -117,21 +181,6 @@ body {
 .tie .icon-conditon-toast {
     color: #FFC54D;
 }
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(calc(100% + 40px));
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-}
-}
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-    }   
-}
 /* Thong tin nguoi dung */
 .info {
     position: absolute;
@@ -143,8 +192,6 @@ body {
     padding: 8px;
     font-size: 22px;
     margin-right: 8px;
-}
-.info .plus {
 }
 .info .coin-user {
     font-size: 20px;

@@ -1,173 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta viewport content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./fornt/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/login.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/styleSigning.css">
+    <link rel="stylesheet" href="./fornt/fontawesome/css/all.min.css">
+    <title>BẦU CUA TÔM CÁ - ĐĂNG NHẬP - ĐĂNG KÍ</title>
 </head>
-
 <body>
-    <div class="main">
-        <div class="grid wide">
-            <div class="header">
-                <div class="lights"></div>
-                <!-- <h2 class="heading">BẦU CUA TÔM CÁ</h2> -->
-                <div class="info">
-                    <i class="fa-solid fa-user-tie avata"></i>
-                    <i class="fa-solid fa-plus plus"></i>
-                    <span class="coin-user">1000</span>
-                    <i class="fa-solid fa-coins coin-icon"></i>
+    <div class="grid wide">
+        <div class="row">
+            <div class="col l-6 l-o-3 container">
+                <div class="col l-12 c-12 header">
+                    <div class="lights"></div>
+                    <div class="signin-state signing-active"><span>Đăng nhập</span> </div>
+                    <div class="signup-state"><span>Đăng ký</span> </div>
                 </div>
-                <div id="toast">
-                    <!-- <div class="toast draw">
-                        <div class="outer-container">
-                            <i class="fa-solid fa-gamepad icon-conditon-toast"></i>
+                <div class="row no-gutters content">
+
+                    <div class="col l-12 m-12 c-12 signing">
+                        <div class="sign-in-container">
+                            <div class="avatar-user"></div>
+                            <h1 class="heading">Đăng nhập tài khoản của bạn</h1>
+
+                            <form class="signing-form" id="sign-in" action="">
+                                <div class="form-group">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                    <input type="text" name="gmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Gmail" required class="input">
+                                </div>
+                
+                                <div class="form-group">
+                                    <i class="fa-solid fa-key"></i>
+                                    <input type="password" name="password" placeholder="Mật khẩu" required  class="input">
+                                </div>
+        
+                                <div class="btn-submit">
+                                    <button type="submit">ĐĂNG NHẬP</button>
+                                </div>
+        
+                                <div class="btn-submit-iclound">
+                                    <button type="reset" ><i class="fa-brands fa-apple"></i>ĐĂNG NHẬP VỚI ICLOUD</button>
+                                </div>
+                
+                                <div class="leave-state">
+                                    <p>Bạn chưa có tài khoản? </p><span class="leave-to-sign-up"> Đăng ký ngay</span>
+                                </div>
+                            </form>
                         </div>
-                        <div class="inner-container">
-                            <p>Lượt này bạn thắng</p>
-                            <p>20000đ</p>
-                        </div>
-                        <div class="toast-control">
-                            <div>Show</div>
-                            <div>Later</div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="box-animal l-7 col">
-                    <div class="row">
-                        <div class="item l-4 c-6 m-4 col ">
-                            <img src="./img/bau.jpg" alt="">
-                            <div class="control-coin">
-                                <div class="increase onclickBau ">+</div>
-                                <div class="coin onclickBau"></div>
-                                <div class="reduce onclickBau">-</div>
-                            </div>
-                        </div>
-                        <div class="item l-4 c-6 m-4 col ">
-                            <img src="./img/cua.jpg" alt="">
-                            <div class="control-coin">
-                                <div class="increase onclickCua ">+</div>
-                                <div class="coin onclickCua "></div>
-                                <div class="reduce onclickCua ">-</div>
-                            </div>
-                        </div>
-                        <div class="item l-4 c-6 m-4 col ">
-                            <img src="./img/tom.jpg" alt="">
-                            <div class="control-coin">
-                                <div class="increase onclickTom ">+</div>
-                                <div class="coin onclickTom "></div>
-                                <div class="reduce onclickTom ">-</div>
-                            </div>
-                        </div>
-                        <div class="item l-4 c-6 m-4 col ">
-                            <img src="./img/ca.jpg" alt="">
-                            <div class="control-coin">
-                                <div class="increase onclickCa ">+</div>
-                                <div class="coin onclickCa "></div>
-                                <div class="reduce onclickCa ">-</div>
-                            </div>
-                        </div>
-                        <div class="item l-4 c-6 m-4 col ">
-                            <img src="./img/ga.jpg" alt="">
-                            <div class="control-coin">
-                                <div class="increase onclickGa ">+</div>
-                                <div class="coin onclickGa "></div>
-                                <div class="reduce onclickGa ">-</div>
-                            </div>
-                        </div>
-                        <div class="item l-4 c-6 m-4 col ">
-                            <img src="./img/huou.jpg" alt="">
-                            <div class="control-coin">
-                                <div class="increase onclickHuou ">+</div>
-                                <div class="coin onclickHuou "></div>
-                                <div class="reduce onclickHuou ">-</div>
-                            </div>
+                
+                        <div class="sign-up-container active">
+                            <div class="avatar-user"></div>
+                            <h1 class="heading">Đăng kí tài khoản mới</h1>
+                            <form class="signing-form" id="sign-up" action="">
+                                <div class="form-group">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                    <input type="text" name="name"  placeholder="Tên" required class="input">
+                                </div>
+                
+                                <div class="form-group">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <input type="text" name="gmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Gmail" required  class="input">
+                                </div>
+                
+                                <div class="form-group">
+                                    <i class="fa-solid fa-key"></i>
+                                    <input type="text" name="password" placeholder="Mật khẩu" required  class="input">
+                                </div>
+                
+                                <div class="btn-submit">
+                                    <button type="submit" >ĐĂNG KÝ</button>
+                                </div>
+                
+                                <div class="leave-state">
+                                    <p>Bạn đã có tài khoản?</p><span class="leave-to-sign-in">Đăng nhập</span>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="control l-5 col">
-                    <div class="circle">
-                        <div id="dice1"></div>
-                        <div id="dice2"></div>
-                        <div id="dice3"></div>
-                    </div>
-                    <div class="spin">Tung xúc xắc</div>
-                </div>
+
             </div>
-            <div id="toast"></div>
         </div>
-
-        <div class="over-lay"></div>
-
-        <div class="account">
-            <div class="sign-header"></div>
-
-            <div class="sign-in-container">
-                <h1 class="account-heading">LOGIN</h1>
-                <p class="account-tile">to your account</p>
-                <form class="signing-form" id="sign-in" action="">
-                    <div class="form-group">
-                        <i class="fa-solid fa-envelope form-icon "></i>
-                        <input type="text" name="gmail" placeholder="Gmail" class="input">
-                    </div>
-
-                    <div class="form-group">
-                        <i class="fa-solid fa-lock form-icon "></i>
-                        <input type="text" name="password" placeholder="Password" class="input">
-                    </div>
-                    <div class="btn-submit">
-                        <button>LOGIN</button>
-                    </div>
-
-                    <div class="leave-state">
-                        <p>Don't have an account?</p><span class="leave-to-sign-up">Sign up</span>
-                    </div>
-                </form>
-            </div>
-
-            <div class="sign-up-container active">
-                <h1 class="account-heading">Register</h1>
-                <p class="account-tile">a new account</p>
-                <form class="signing-form" id="sign-up" action="">
-                    <div class="form-group">
-                        <i class="fa-solid fa-envelope form-icon "></i>
-                        <input type="text" name="gmail" placeholder="Gmail" class="input">
-                    </div>
-
-                    <div class="form-group">
-                        <i class="fa-solid fa-lock form-icon "></i>
-                        <input type="text" name="password" placeholder="Password" class="input">
-                    </div>
-
-                    <div class="form-group">
-                        <i class="fa-solid fa-lock form-icon "></i>
-                        <input type="text" name="re-password" placeholder="Confirm password" class="input">
-                    </div>
-
-                    <div class="btn-submit">
-                        <button>CREATE</button>
-                    </div>
-
-                    <div class="leave-state">
-                        <p>Already have an account?</p><span class="leave-to-sign-in">Sign in</span>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
     </div>
-    <script src="./account.js"></script>
-    <script src="./main.js"></script>
+    <script src="./Javascript/signing.js"></script>
 </body>
-
 </html>
