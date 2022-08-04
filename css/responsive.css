@@ -22,24 +22,24 @@
         width: 34px;
     }
     .out-game {
-        left: 14%;
+        left: 16%;
     }
     .out-game a i {
-        font-size: 40px;
+        font-size: 55px;
         margin-left: 18px;
     }
     .name-game {
-        height: 60px;
+        height: 66px;
         width: 380px;
     }
     .name-game span {
-        font-size: 36px;
+        font-size: 45px;
     }
     .info .avata,
     .info .plus,
     .info .coin-user,
     .coin-icon {
-        font-size: 40px !important;
+        font-size: 55px !important;
     }
     .control-coin .coin {
         font-size: 34px;
@@ -76,24 +76,27 @@
         font-size: 30px;
     }
     .toast {
-        min-width: 600px;
-        height: 100px;
+        min-width: 745px;
+        height: 160px;
+        right: 22%;
+        top: 5%;
     }
     .icon-conditon-toast {
-        font-size: 50px;
+        font-size: 95px;
+        padding: 0 35px;
     }
     .inner-container p:first-child {
-        font-size: 30px;
+        font-size: 44px;
     }
     .inner-container p:last-child{
-        font-size: 28px;
+        font-size: 36px;
     }
     .toast-control {
-        height: 100px;
-        width: 100px;
+        height: 160px;
+        width: 160px;
     }
     .toast-control div {
-        font-size: 30px;
+        font-size: 40px;
     }
 }
 @media (min-width: 320px ) and (max-width: 991px) { 
@@ -114,28 +117,28 @@
     .lights,
     .lights::after,
     .lights::before {
-        height: 36px;
-        width: 36px;
+        height: 44px;
+        width: 44px;
     }
     .out-game {
-        left: 15%;
+        left: 18%;
     }
     .out-game a i {
-        font-size: 45px;
+        font-size: 60px;
         margin-left: 18px;
     }
     .name-game {
-        height: 60px;
+        height: 66px;
         width: 380px;
     }
     .name-game span {
-        font-size: 36px;
+        font-size: 40px;
     }
     .info .avata,
     .info .plus,
     .info .coin-user,
     .coin-icon {
-        font-size: 46px !important;
+        font-size: 55px !important;
     }
     .info .plus {
         margin-left: 15px;
