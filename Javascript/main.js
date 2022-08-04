@@ -151,7 +151,7 @@ const app = {
                     `;
                     toastHtml.appendChild(newToast)
                     // Cập nhập lại mảng toast
-                    setTimeout(function() { // sau khi hien thong bao xong thi xoá bỏ
+                    setTimeout(function() {
                         toastHtml.removeChild(newToast);
                     }, 3500) // sau khoảng thời gian 4s dalay + 1s để fadeOut thì xoá bỏ
                 }
