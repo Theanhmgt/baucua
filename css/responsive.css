@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width : 768px) {
     .row {
         margin: 0;
     }
@@ -9,13 +9,16 @@
         background-color: unset;
     }
     .header {
-        height: 100px;
+        height: 200px !important;
         border-radius: unset;
     }
 }
 @media (min-width: 768px ) and (max-width: 991px) { 
     .row {
         margin: 0;
+    }
+    .wide {
+        width: unset;
     }
     .container {
         margin: 0 !important;
@@ -30,8 +33,9 @@
     .lights,
     .lights::after,
     .lights::before {
-        height: 30px;
-        width: 30px;
+        height: 26px;
+        width: 26px;
+        left: 6%;
     }
     .out-game {
         left: 13%;
@@ -54,7 +58,7 @@
         font-size: 32px !important;
     }
     .control-coin .coin {
-        font-size: 30px;
+        font-size: 32px;
     }
     .control-container {
         background-color: unset;
@@ -65,25 +69,25 @@
         transform: unset;
     }
     .item .control-coin {
-        height: 80px;
+        height: 100px;
     }
     .increase, .reduce {
-        width: 85px;
-        height: 55px;
+        width: 100px;
+        height: 75px;
         font-size: 36px;
     }
     #dice1, #dice2, #dice3 {
-        margin-top: 20px;
+        margin-top: 30px;
         position: unset;
-        height: 280px;
-        width: 280px;
+        height: 340px;
+        width: 340px;
     }
     .spin {
-        height: 100px;
-        width: 220px;
+        height: 150px;
+        width: 250px;
         text-align: center;
         border-radius: 20px;
-        padding-top: 20px;
+        padding-top: 30px;
         font-size: 30px;
     }
     .toast {

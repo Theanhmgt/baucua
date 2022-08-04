@@ -11,6 +11,9 @@
         background-color: unset;
         box-shadow: unset;
     }
+    .header {
+        border-radius: 0;
+    }
     .lights,
     .lights::after,
     .lights::before {
@@ -40,6 +43,7 @@
     }
     .header {
         height: 100px;
+        border-radius: 0;
     }
     .signin-state,
     .signup-state {
