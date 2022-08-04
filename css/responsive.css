@@ -1,24 +1,6 @@
-@media (max-width : 768px) {
-    .row {
-        margin: 0;
-    }
-    .container {
-        margin: 0 !important;
-        border-radius: unset;
-        box-shadow: unset;
-        background-color: unset;
-    }
-    .header {
-        height: 200px !important;
-        border-radius: unset;
-    }
-}
 @media (min-width: 768px ) and (max-width: 991px) { 
     .row {
         margin: 0;
-    }
-    .wide {
-        width: unset;
     }
     .container {
         margin: 0 !important;
@@ -30,32 +12,34 @@
         height: 100px;
         border-radius: unset;
     }
+    .lights {
+        left: 6%;
+    }
     .lights,
     .lights::after,
     .lights::before {
-        height: 26px;
-        width: 26px;
-        left: 6%;
+        height: 34px;
+        width: 34px;
     }
     .out-game {
-        left: 13%;
+        left: 14%;
     }
     .out-game a i {
-        font-size: 36px;
-        margin-left: 15px;
+        font-size: 40px;
+        margin-left: 18px;
     }
     .name-game {
-        height: 50px;
-        width: 300px;
+        height: 60px;
+        width: 380px;
     }
     .name-game span {
-        font-size: 30px;
+        font-size: 36px;
     }
     .info .avata,
     .info .plus,
     .info .coin-user,
     .coin-icon {
-        font-size: 32px !important;
+        font-size: 40px !important;
     }
     .control-coin .coin {
         font-size: 32px;
@@ -109,6 +93,53 @@
     }
     .toast-control div {
         font-size: 30px;
+    }
+}
+@media (min-width: 320px ) and (max-width: 991px) { 
+    .row {
+        margin: 0;
+    }
+    .container {
+        margin: 0 !important;
+        border-radius: unset;
+        box-shadow: unset;
+        background-color: unset;
+    }
+    .header {
+        height: 150px;
+        border-radius: unset;
+    }
+    .lights,
+    .lights::after,
+    .lights::before {
+        height: 36px;
+        width: 36px;
+    }
+    .out-game {
+        left: 15%;
+    }
+    .out-game a i {
+        font-size: 45px;
+        margin-left: 18px;
+    }
+    .name-game {
+        height: 60px;
+        width: 380px;
+    }
+    .name-game span {
+        font-size: 36px;
+    }
+    .info .avata,
+    .info .plus,
+    .info .coin-user,
+    .coin-icon {
+        font-size: 46px !important;
+    }
+    .info .plus {
+        margin-left: 15px;
+    }
+    .info .coin-user {
+        margin-right: 15px;
     }
 }
 
