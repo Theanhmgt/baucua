@@ -81,9 +81,9 @@ const app = {
         // Xu ly su kien quay xuc sac
         spin.onclick = (e) => {
             let randomDice = setInterval( () => { // Thay đổi hình ảnh của 3 ô xúc sắc và ramdom 0-5 sau mỗi 50ms
-                resultRandomDice1 = Math.floor(Math.random() * 6);
-                resultRandomDice2 = Math.floor(Math.random() * 6);
-                resultRandomDice3 = Math.floor(Math.random() * 6);
+                resultRandomDice1 = Math.floor((Math.random() * 10) % 6);
+                resultRandomDice2 = Math.floor((Math.random() * 10) % 6);
+                resultRandomDice3 = Math.floor((Math.random() * 10) % 6);
 
                 imgDice1.style.background = `url("${this.diceBg[resultRandomDice1]}") top center / cover no-repeat `
                 imgDice2.style.background = `url("${this.diceBg[resultRandomDice2]}") top center / cover no-repeat `
